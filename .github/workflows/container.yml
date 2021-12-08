@@ -5,10 +5,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '/container/**'
 
 defaults:
   run:
-    working-directory: /container
+    working-directory: container
 
 jobs:
   build:
