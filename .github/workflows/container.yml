@@ -7,13 +7,13 @@ on:
     paths:
       - "packages/container/**"
 
-default:
+defaults:
   run:
     working-directory: packages/container
 
 jobs:
   build:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
