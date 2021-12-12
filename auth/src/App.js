@@ -19,8 +19,12 @@ export default ({ onSignIn, history }) => {
       <Router history={history}>
         <StylesProvider generateClassName={generateClassName}>
           <Switch>
-            <Route exact path="/auth/signin" component={SignIn} />
-            <Route exact path="/auth/signup" component={SignUp} />
+            <Route exact path="/auth/signin">
+              <SignIn onSignIn={onSignIn} />
+            </Route>
+            <Route exact path="/auth/signup">
+              <SignUp onSignIn={onSignIn} />
+            </Route>
           </Switch>
         </StylesProvider>
       </Router>
